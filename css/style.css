@@ -1,0 +1,759 @@
+/* Fonts */
+
+@font-face {
+    font-family: "iranyekan";
+    src: url(../fonts/iranyekanwebregular.eot);
+    src: url(../fonts/iranyekanwebregular.svg) format('svg');
+    src: url(../fonts/iranyekanwebregular.ttf) format("embedded-opentype");
+    src: url(../fonts/iranyekanwebregular.woff) format("truetype");
+}
+
+@font-face {
+    font-family: "kaghaz";
+    src: url(../fonts/Kaghaz.otf);
+    src: url(../fonts/Kaghaz.ttf) format("embedded-opentype");
+    src: url(../fonts/Kaghaz.woff) format("truetype");
+    src: url(../fonts/Kaghaz.woff2) format("woff2");
+}
+
+
+/* ------------------------------------------------------------ */
+/* General */
+
+a {
+    text-decoration: none !important;
+}
+
+ol,ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 62.5%;
+    font-family: "iranyekan";
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+video{
+    object-fit: fill;
+    border-radius: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+
+/* ------------------------------------------------------- */
+/* Navbar */
+
+  
+#main {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidemenu{
+    height: 4rem;
+    width: 100vh;
+    position: fixed;
+    z-index: 3;
+    background-color: #222;
+    transform: rotate(90deg) translateX(100vh);
+    transform-origin: top right;
+    border-bottom: 1.5px solid #fff;
+}
+
+.navbar-brand{
+    font-size: 2rem;
+    color: #f18f01;
+    font-family: "kaghaz";
+    transform: rotate(180deg);
+}
+
+.openbtn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    left: 45%;
+    transform: rotate(90deg) translateY(-50%);
+}
+.closebtn .fa{
+    font-size: 4rem;
+}
+
+
+/* ---------------------------------Menu------------------------------- */
+
+
+.sidebar {
+    height: 100%;
+    width: 30rem;
+    position: fixed;
+    z-index: 1;
+    right: -30rem;
+    background-color: #222;
+    overflow-x: hidden;
+    margin-right: 4rem;
+    transition: .7s ease;
+}
+.active{
+    right: 0rem;
+}
+
+.logo{
+    position: absolute;
+    right: 5%;
+    top: 4%;
+}
+
+.menu-links{
+    position: absolute;
+    left: 5%;
+    top: 6%;
+}
+
+.menu-links a{
+    font-size: .9rem;
+    display: block;
+    padding: 0 .5rem;
+    color: #aaa;
+    transition: 0.3s;
+}
+
+.menu-links a:hover{
+    color: #aaa !important;
+}
+
+.departments{
+    position: absolute;
+    top: 25%;
+    padding-right: 2rem;
+    text-align: right;
+}
+  
+.departments a {
+    font-size: 1.5rem;
+    display: block;
+    padding: .8rem 0;
+    transition: 0.3s;
+    color: #fff;
+}
+  
+.departments a:hover {
+    color: #aaa !important;
+}
+
+.contact{
+    position: absolute;
+    bottom: 11%;
+    padding-right: 1rem;
+}
+
+.contact a{
+    color: #777;
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+.copyright{
+    position: absolute;
+    bottom: 4%;
+    padding-right: 2rem;
+    font-size: 1rem;
+    color: #777;
+}
+
+
+/* ------------------------------------------------------- */
+/* Horizontal Page Settings */
+
+.outer-wrapper {
+    width: 100vh;
+    height: 100vw;
+    transform: rotate(90deg) translateX(100vh);
+    transform-origin: top right;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 645vw;
+    transform: rotate(-90deg) translateY(-100vh);
+    transform-origin: top right;
+}
+
+.slide {
+    width: 60vw;
+    height: 100vh;
+}
+
+
+/* ----------------------------------------------------- */
+/* Section 1 : About Us */
+
+
+.one {
+    background: #efdefe;
+    padding-right: 5rem;
+}
+
+.one h2{
+    font-family: "kaghaz";
+    color: #222;
+}
+
+.one p{
+    font-size: 1.05rem;
+    text-align: justify;
+    padding-left: 10rem;
+}
+
+.one .row:first-child{
+    top: 40% !important;
+    transform: translateY(-50%);
+}
+
+.filters {
+    text-align: center;
+}
+
+.filters ul li {
+    display: block;
+    padding: 1rem 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.filters ul li:after {
+    content: "";
+    display: block;
+    width: calc(0% - 40px);
+    position: absolute;
+    height: 2px;
+    background: green;
+    transition: width 350ms ease-out;
+}
+
+.filters ul li:hover:after {
+    width: calc(100% - 40px);
+    transition: width 350ms ease-out;
+}
+
+.filters ul li.active:after {
+    width: calc(100% - 40px);
+}
+
+.scroll-hint{
+    position: absolute;
+    left: -3.5rem;
+    top: 10%;
+    z-index: 1;
+}
+
+.scroll-hint span{
+    font-size: 1rem;
+    color: #222;
+    margin-left: 3rem;
+    font-family: "kaghaz";
+}
+
+.scroll-hint hr{
+    border: 0;
+    width: 7rem;
+    height: .1rem;
+    background-color: #000;
+    margin-right: 2rem;
+}
+
+
+/* ---------------------------------------------- */
+/* Section 2 : Work 1  Portfolio */
+
+
+.two {
+    background: #a3f3d3;
+}
+
+.sticky{
+    width: 4rem;
+    height: 100vh;
+    background: gold;
+    position: sticky;
+    right: 0;
+}
+
+.item img{
+    border-radius: .5rem;
+}
+
+
+/* ------------------------------------------------- */
+/* Section 3 : Work 2 */
+
+
+.three {
+    background: #0bbaa0;
+}
+
+.work1{
+    position: absolute;
+    top: 20%;
+    right: 15%;
+    width: 70%;
+}
+
+.work1 span{
+    font-size: 7rem;
+    position: absolute;
+    right: -2rem;
+    top: -6rem;
+}
+
+.work1 img{
+    border-radius: 1rem;
+}
+
+.work1 h2{
+    font-size: 2.3rem;
+    position: absolute;
+    right: 10%;
+    bottom: -5rem;
+    color: #222;
+    font-family: "kaghaz";
+}
+
+.work1 h3{
+    position: absolute;
+    top: .5rem;
+    transform: rotate(-90deg);
+    font-size: 1.2rem;
+    left: -6rem;
+}
+
+
+/* ---------------------------------------------------------- */
+/* Section 4 : Work 3 */
+
+
+.four {
+    background: #00dfdf;
+}
+
+.five {
+    background: #efdefe;
+}
+
+.six {
+    background: #a3f3d3;
+}
+
+.seven {
+    background: #0bbaa0;
+}
+
+.eight {
+    background: #00dfdf;
+}
+
+.nine {
+    background: #a3f3d3;
+}
+
+.ten {
+    background: #00dfdf;
+}
+
+
+/* --------------------------------------------- */
+/* Last Section : Chat */
+
+.eleven {
+    background: #a3f3d3;
+}
+
+.slide.eleven{
+    width: 45vw;
+}
+
+.eleven h1{
+    font-family: "kaghaz";
+    margin-bottom: 3rem;
+    transition: ease-in-out .3s;
+}
+
+.eleven h1:hover{
+    margin-right: 1.5rem;
+}
+
+.eleven .fa{
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.eleven p{
+    font-size: 1rem;
+    margin-bottom: 3rem;
+}
+
+.eleven a{
+    color: #222;
+    font-size: 1rem;
+}
+
+
+/* --------------------------------------- */
+/* Responsive Settings */
+
+
+@media (max-width: 575.98px){
+    .sidebar{
+        width: calc(100vw - 3rem);
+    }
+    .sidemenu{
+        height: 3rem !important;
+    }
+    .navbar-brand{
+        margin-top: -1rem !important;
+    }
+    .openbtn .fa{
+        font-size: 1.5rem !important;
+    }
+    .sidebar{
+        margin-right: 3rem !important;
+    }
+    .logo{
+        top: 3% !important;
+        right: 3% !important;
+    }
+    .menu-links{
+        top: 5% !important;
+        left: 3% !important;
+    }
+    .menu-links a{
+        font-size: .7rem !important;
+    }
+    .departments{
+        top: 20% !important;
+        padding-right: 1rem !important;
+    }
+    .departments a{
+        font-size: .8rem !important;
+    }
+    .contact{
+        padding-bottom: 1.5rem !important;
+    }
+    .contact a{
+        font-size: .8rem !important;
+        margin-right: 0 !important;
+        display: block !important;
+        text-align: right !important;
+    }
+    .copyright{
+        bottom: 2% !important;
+        font-size: .8rem !important;
+        padding-right: 1rem !important;
+        text-align: right !important;
+    }
+    .copyright br{
+        display: block !important;
+    }
+    .wrapper{
+        width: 975vw !important;
+    }
+    .slide{
+        width: 90vw !important;
+    }
+    .one .row.justify-content-start{
+        width: 100% !important;
+    }
+    .one .row h2{
+        font-size: 1.4rem !important;
+    }
+    .one .row p{
+        font-size: .6rem !important;
+        padding-left: 5rem !important;
+    }
+    .one .row.align-content-center{
+        right: 50% !important;
+    }
+    .nav-link{
+        font-size: 1rem !important;
+    }
+    .scroll-hint{
+        top: 85% !important;
+    }
+    .scroll-hint hr{
+        width: 5rem !important;
+        margin-right: 1rem !important;
+    }
+    .slide.two{
+        width: 110vw !important;
+    }
+    .filters ul li{
+        padding: .2rem 10px !important;
+        font-size: .8rem !important;
+    }
+    .filters ul li:after{
+        width: calc(0% - 20px);
+    }
+    .filters ul li:hover:after{
+        width: calc(100% - 20px);
+    }
+    .filters ul li.active:after{
+        width: calc(100% - 20px);
+    }
+    .work1{
+        width:75% !important;
+        right: 10% !important;
+        top: 33% !important;
+    }
+    .work1 span{
+        font-size: 3rem !important;
+        top: -2.5rem !important;
+        right: -1rem !important;
+    }
+    .work1 h2{
+        font-size: 1rem !important;
+        bottom: -3rem !important;
+    }
+    .work1 h3{
+        font-size: .7rem !important;
+        left: -3.5rem !important;
+    }
+    .wrapper .slide:last-child{
+        width: 80vw !important;
+    }
+    .eleven .row{
+        right: 10% !important;
+    }
+    .eleven h1{
+        font-size: 1.5rem !important;
+    }
+    .eleven .fa{
+        font-size: 1.5rem !important;
+        margin-right: .5rem !important;
+    }
+    .eleven p{
+        font-size: .8rem !important;
+    }
+    .eleven a{
+        font-size: .8rem !important;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px){
+    .sidebar{
+        width: calc(100vw - 3rem);
+    }
+    .sidemenu{
+        height: 3rem !important;
+    }
+    .navbar-brand{
+        margin-top: -1rem !important;
+    }
+    .openbtn .fa{
+        font-size: 1.5rem !important;
+    }
+    .closebtn{
+        top: 8px !important;
+        right: 45% !important;
+    }
+    .closebtn .fa{
+        font-size: 1.9rem !important;
+    }
+    .sidebar{
+        margin-right: 3rem !important;
+    }
+    .logo{
+        top: 3% !important;
+        right: 3% !important;
+    }
+    .menu-links{
+        top: 5% !important;
+        left: 3% !important;
+    }
+    .menu-links a{
+        font-size: .7rem !important;
+    }
+    .departments{
+        top: 20% !important;
+        padding-right: 1rem !important;
+    }
+    .departments a{
+        font-size: .8rem !important;
+    }
+    .contact a{
+        font-size: .8rem !important;
+        margin-right: .5rem !important;
+        display: block !important;
+        text-align: right !important;
+    }
+    .copyright{
+        bottom: 2% !important;
+        font-size: .8rem !important;
+        padding-right: 1rem !important;
+    }
+    .wrapper{
+        width: 875vw !important;
+    }
+    .slide{
+        width: 80vw !important;
+    }
+    .one .row{
+        width: 100% !important;
+    }
+    .one .row h2{
+        font-size: 1.7rem !important;
+    }
+    .one .row p{
+        font-size: .8rem !important;
+    }
+    .nav-link{
+        font-size: 1rem !important;
+    }
+    .scroll-hint{
+        top: 40% !important;
+    }
+    .scroll-hint hr{
+        width: 5rem !important;
+        margin-right: 1rem !important;
+    }
+    .slide.two{
+        width: 100vw !important;
+    }
+    .filters ul li{
+        padding: .2rem 10px !important;
+    }
+    .filters ul li:after{
+        width: calc(0% - 20px);
+    }
+    .filters ul li:hover:after{
+        width: calc(100% - 20px);
+    }
+    .filters ul li.active:after{
+        width: calc(100% - 20px);
+    }
+    .work1{
+        width:75% !important;
+        right: 10% !important;
+        top: 25% !important;
+    }
+    .work1 span{
+        font-size: 5rem !important;
+        top: -4rem !important;
+    }
+    .work1 h2{
+        font-size: 1.6rem !important;
+    }
+    .work1 h3{
+        font-size: 1rem !important;
+        left: -5rem !important;
+    }
+    .wrapper .slide:last-child{
+        width: 70vw !important;
+    }
+    .eleven .row{
+        right: 10% !important;
+    }
+    .eleven h1{
+        font-size: 2.2rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px){
+    .wrapper{
+        width: 810vw !important;
+    }
+    .slide{
+        width: 75vw !important;
+    }
+    .one .row{
+        width: 100% !important;
+    }
+    .nav-link{
+        font-size: 1.3rem !important;
+    }
+    .scroll-hint{
+        top: 40% !important;
+    }
+    .scroll-hint hr{
+        width: 5rem !important;
+        margin-right: 1rem !important;
+    }
+    .slide.two{
+        width: 80vw !important;
+    }
+    .filters ul li{
+        padding: .2rem 10px !important;
+    }
+    .filters ul li:after{
+        width: calc(0% - 20px);
+    }
+    .filters ul li:hover:after{
+        width: calc(100% - 20px);
+    }
+    .filters ul li.active:after{
+        width: calc(100% - 20px);
+    }
+    .work1{
+        width:75% !important;
+        right: 10% !important;
+    }
+    .work1 span{
+        font-size: 5rem !important;
+        top: -4rem !important;
+    }
+    .work1 h2{
+        font-size: 1.9rem !important;
+    }
+    .wrapper .slide:last-child{
+        width: 60vw !important;
+    }
+    .eleven .row{
+        right: 10% !important;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+    .nav-link{
+        font-size: 1.2rem !important;
+    }
+    .one .row{
+        width: 90% !important;
+    }
+    .scroll-hint{
+        top: 6% !important;
+    }
+    .eleven .row{
+        right: 10% !important;
+    }
+    .work1 h2{
+        font-size: 2rem !important;
+    }
+}
+
+@media (min-width: 1200px)and (max-width: 1440px){
+    .work1{
+        top: 15% !important;
+    }
+    .one .row{
+        width: 80% !important;
+    }
+    /* .two .container-fluid{
+        top: 5% !important;
+    } */
+}
+
+@media (min-width: 1440px){}
